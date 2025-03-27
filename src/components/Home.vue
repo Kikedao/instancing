@@ -5,13 +5,13 @@
       <router-link to="/div-rectangles">
         <button class="styled-button">Div rectangles</button>
       </router-link>
-      <router-link to="/canvas-one">
-        <button class="styled-button">Canvas One</button>
+      <router-link to="/canvas-rectangles">
+        <button class="styled-button">Canvas Rectangles</button>
       </router-link>
-      <router-link to="/canvas-two">
-        <button class="styled-button">Canvas Two</button>
+      <router-link to="/canvas-three-cubes">
+        <button class="styled-button">Three Cubes</button>
       </router-link>
-      <router-link to="/canvas-three">
+      <router-link to="/canvas-three-instanced">
         <button class="styled-button">Canvas Three</button>
       </router-link>
     </div>

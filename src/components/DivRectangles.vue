@@ -10,8 +10,8 @@
   <script lang="ts">
   import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
   import { useRouter } from 'vue-router';
-  import Stats from 'stats.js';
   import GUI from 'lil-gui';
+  import Stats from 'three/examples/jsm/libs/stats.module.js';
   
   interface Rectangle {
     x: number;
@@ -110,7 +110,7 @@
         stats.dom.id = "performance-stats";
         stats.showPanel(0);
         if (statsContainer.value) {
-          statsContainer.value.appendChild(stats.domElement);
+          statsContainer.value.appendChild(stats.dom);
         }
   
         // Set up lil-gui for interactive controls.
@@ -141,7 +141,7 @@
   });
   </script>
   
-  <style>
+  <style scoped>
   .div-container {
     position: relative;
     width: 100vw;

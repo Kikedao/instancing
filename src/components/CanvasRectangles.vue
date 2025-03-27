@@ -12,8 +12,8 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted, onBeforeUnmount } from 'vue';
 import { useRouter } from 'vue-router';
-import Stats from 'stats.js';
 import GUI from 'lil-gui';
+import Stats from 'three/examples/jsm/libs/stats.module.js';
 
 interface Rectangle {
   x: number;
@@ -114,7 +114,7 @@ export default defineComponent({
       stats.dom.id = "performance-stats";
       stats.showPanel(0);
       if (statsContainer.value) {
-        statsContainer.value.appendChild(stats.domElement);
+        statsContainer.value.appendChild(stats.dom);
       }
 
       // Create a lil-gui panel to adjust rectangle count and speed.
@@ -144,7 +144,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 .canvas-container {
   position: relative;
   width: 100vw;
@@ -159,19 +159,20 @@ export default defineComponent({
 }
 
 .back-button {
-  position: absolute;
-  top: initial;
-  bottom: 20px;
-  padding: 0.5rem 1rem;
-  background-color: #2c2c2c;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  z-index: 10;
-  transition: background-color 0.3s ease;
-}
+    position: absolute;
+    top: initial;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
 
 .back-button:hover {
   background-color: #3c3c3c;

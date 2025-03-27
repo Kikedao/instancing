@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../components/Home.vue';
-import CanvasOne from '../components/CanvasOne.vue';
-import CanvasTwo from '../components/CanvasTwo.vue';
-import CanvasThree from '../components/CanvasThree.vue';
 import DivRectangles from '../components/DivRectangles.vue';
+import CanvasRectangles from '../components/CanvasRectangles.vue';
+import CanvasThreeCubes from '../components/CanvasThreeCubes.vue';
+import CanvasThreeInstanced from '../components/CanvasThreeInstanced.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/div-rectangles', name: 'DivRectangles', component: DivRectangles },
-  { path: '/canvas-one', name: 'CanvasOne', component: CanvasOne },
-  { path: '/canvas-two', name: 'CanvasTwo', component: CanvasTwo },
-  { path: '/canvas-three', name: 'CanvasThree', component: CanvasThree },
+  { path: '/canvas-rectangles', name: 'CanvasRectangles', component: CanvasRectangles },
+  { path: '/canvas-three-cubes', name: 'CanvasThreeCubes', component: CanvasThreeCubes },
+  { path: '/canvas-three-instanced', name: 'CanvasThreeInstanced', component: CanvasThreeInstanced },
 ];
 
 const router = createRouter({
