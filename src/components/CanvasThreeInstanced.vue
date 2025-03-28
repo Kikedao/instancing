@@ -60,17 +60,17 @@ export default defineComponent({
 
       instanceData = [];
       const geometry = new THREE.BoxGeometry(config.cubeSize, config.cubeSize, config.cubeSize);
-      const material = new THREE.MeshStandardMaterial({ vertexColors: true });
+      const material = new THREE.MeshLambertMaterial();
 
       instancedMesh = new THREE.InstancedMesh(geometry, material, config.cubeCount);
-      instancedMesh.castShadow = true;
-      instancedMesh.receiveShadow = true;
+      /* instancedMesh.castShadow = true;
+      instancedMesh.receiveShadow = true; */
 
       for (let i = 0; i < config.cubeCount; i++) {
         const pos = new THREE.Vector3(
-          (Math.random() - 0.5) * 20,
-          (Math.random() - 0.5) * 20,
-          (Math.random() - 0.5) * 20
+          (Math.random() - 0.5) * 300,
+          (Math.random() - 0.5) * 300,
+          (Math.random() - 0.5) * 300
         );
         const rot = new THREE.Euler(
           Math.random() * Math.PI * 2,

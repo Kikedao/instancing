@@ -115,7 +115,7 @@
   
         // Set up lil-gui for interactive controls.
         gui = new GUI();
-        gui.add(config, 'rectCount', 0, 20000, 1).onChange(() => {
+        gui.add(config, 'rectCount', 0, 20000, 1).onFinishChange(() => {
           updateRectangles();
         });
         gui.add(config, 'speed', 0, 10, 0.1);

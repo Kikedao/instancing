@@ -119,7 +119,7 @@ export default defineComponent({
 
       // Create a lil-gui panel to adjust rectangle count and speed.
       gui = new GUI();
-      gui.add(config, 'rectCount', 0, 20000, 1).onChange(() => {
+      gui.add(config, 'rectCount', 0, 20000, 1).onFinishChange(() => {
         updateRectangles();
       });
       gui.add(config, 'speed', 0, 10, 0.1);

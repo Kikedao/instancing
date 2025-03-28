@@ -45,18 +45,18 @@ export default defineComponent({
       // Add cubes if needed.
       while (cubes.length < config.cubeCount) {
         const geometry = new THREE.BoxGeometry(config.cubeSize, config.cubeSize, config.cubeSize);
-        const material = new THREE.MeshStandardMaterial({
+        const material = new THREE.MeshLambertMaterial({
           color: new THREE.Color(Math.random(), Math.random(), Math.random()),
         });
         const cube = new THREE.Mesh(geometry, material);
         // Enable shadows on the cube.
-        cube.castShadow = true;
-        cube.receiveShadow = true;
+        /* cube.castShadow = true;
+        cube.receiveShadow = true; */
         // Place the cube at a random position with double the spread.
         cube.position.set(
-          (Math.random() - 0.5) * 20,
-          (Math.random() - 0.5) * 20,
-          (Math.random() - 0.5) * 20
+          (Math.random() - 0.5) * 30,
+          (Math.random() - 0.5) * 30,
+          (Math.random() - 0.5) * 30
         );
         scene.add(cube);
         cubes.push(cube);
